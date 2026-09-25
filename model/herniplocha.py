@@ -7,7 +7,6 @@ from model.strelec import Střelec
 from model.dama import Dáma
 from model.kral import Král
 
-
 class HerniPlocha:
     def __init__(self):
         self.mrizka: List[List[Optional[Figurka]]] = [[None for _ in range(8)] for _ in range(8)]
