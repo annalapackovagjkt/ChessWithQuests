@@ -11,3 +11,4 @@ class Dáma(Figurka):
         ]
         self.vektory = dama_vektory
         self.vektory_utoku = dama_vektory
+
