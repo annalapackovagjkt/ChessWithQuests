@@ -14,3 +14,16 @@ class QuestManager:
                 q.splneno = True
                 nově_splnene.append(q)
         return nově_splnene
+
+    def __init__(self):
+        self.dostupne_questy = [
+            Quest(1, "První krev", "Vyhoď první soupeřovu figurku", odmena=50),
+            Quest(2, "Jezdecký výpad", "Táhni Koněm do soupeřovy poloviny", odmena=100)
+        ]
+
+    def vyhodnot_po_tahu(self, tah, vyhozena_figurka=None):
+        for quest in self.dostupne_questy:
+            if not quest.splneno:
+                if quest.id_quest == 1 and vyhozena_figurka is not None:
+                    quest.splneno = True
+                    print(f"Quest splněn: {quest.nazev}!")

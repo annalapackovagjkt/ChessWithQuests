@@ -27,3 +27,23 @@ class RevizeTahu:
             return False
         return False
 
+    def generuj_bezpecne_tahy(self, plocha: HerniPlocha, pozice: Tuple[int, int]) -> List[Tuple[int, int]]:
+        figurka = plocha.get_figurka(pozice[0], pozice[1])
+        if not figurka:
+            return []
+
+        surove_tahy = self.generuj_mozne_tahy(plocha, pozice)
+        bezpecne_tahy = []
+
+        for kam in surove_tahy:
+            puvodni_fig_na_cili = plocha.get_figurka(kam[0], kam[1])
+            plocha.mrizka[pozice[1]][pozice[0]] = None
+            plocha.mrizka[kam[1]][kam[0]] = figurka
+
+            if not self.check_sach(plocha, figurka.barva_tym):
+                bezpecne_tahy.append(kam)
+
+            plocha.mrizka[pozice[1]][pozice[0]] = figurka
+            plocha.mrizka[kam[1]][kam[0]] = puvodni_fig_na_cili
+
+        return bezpecne_tahy
