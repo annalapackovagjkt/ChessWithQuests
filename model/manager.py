@@ -6,41 +6,6 @@ from model.hrac import Hrac, Uzivatel
 from model.herniplocha import HerniPlocha
 from model.figurka import Figurka
 
-class Tah:
-
-    def __init__(self, odkud: str = "", kam: str = "", figurka: str = ""):
-        self.odkud = odkud
-        self.kam = kam
-        self.figurka = figurka
-
-    def __str__(self):
-        return f"{self.figurka} {self.odkud}->{self.kam}".strip()
-
-
-class HerniPlocha:
-    pass
-
-
-class Hrac:
-
-    def __init__(self, id_hrace: int, jmeno: str):
-        self.id_hrace = id_hrace
-        self.jmeno = jmeno
-
-
-class Uzivatel:
-
-    def __init__(self, id_uzivatele: int, jmeno: str):
-        self.id_uzivatele = id_uzivatele
-        self.jmeno = jmeno
-
-
-class RevizorTahu:
-
-    def je_platny(self, plocha: HerniPlocha, tah: Tah) -> bool:
-        return True
-
-
 class GameManager:
 
     def __init__(self, plocha: Optional[HerniPlocha] = None, hraci: Optional[List[Hrac]] = None):

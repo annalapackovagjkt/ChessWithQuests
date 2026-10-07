@@ -54,14 +54,3 @@ class HerniPlocha:
         cerny_prvni_rada = [Věž, Kůň, Střelec, Dáma, Král, Střelec, Kůň, Věž]
         for x, cls in enumerate(cerny_prvni_rada):
             self.poloz_figurku(cls(barva_tym=-1), x, 7)
-
-class Tah:
-    def __init__(self, vychozi_pozice, cilova_pozice, figurka, typ_tahu):
-        self.vychozi_pozice = vychozi_pozice
-        self.cilova_pozice = cilova_pozice
-        self.figurka = figurka
-        self.typ_tahu = typ_tahu
-    def over_platnost(self):
-        return True
-    def proved_tah(self):
-        pass
