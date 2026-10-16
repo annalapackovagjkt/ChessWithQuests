@@ -7,7 +7,7 @@ class QuestManager:
     def prida_quest(self, quest: Quest) -> None:
         self.seznam_questu.append(quest)
 
-    def skontroluj_questy(self, herni_data: Dict[str, Any]) -> List[Quest]:
+    def zkontroluj_questy(self, herni_data: Dict[str, Any]) -> List[Quest]:
         nově_splnene = []
         for q in self.seznam_questu:
             if not q.splneno and q.vyhodnot(herni_data):
