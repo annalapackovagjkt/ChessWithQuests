@@ -1,5 +1,6 @@
 from typing import Tuple
-from model.figurka import Figurka, Vektor
+from model.figurka import Figurka
+from model.vektor import Vektor
 
 
 class Střelec(Figurka):

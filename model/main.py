@@ -1,6 +1,8 @@
 from model.herniplocha import HerniPlocha
-from model.hrac import Hrac, Uzivatel
-from model.manager import GameManager, Tah
+from model.hrac import Hrac
+from model.uzivatel import Uzivatel
+from model.manager import GameManager
+from model.tah import Tah
 
 
 def spusti_test():

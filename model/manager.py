@@ -2,7 +2,8 @@ from typing import List, Optional
 from model.timer import Timer
 from model.quest import QuestManager
 from model.logger import GameLogger, MetadataWriter, ChessNotationWriter
-from model.hrac import Hrac, Uzivatel
+from model.hrac import Hrac
+from model.uzivatel import Uzivatel
 from model.herniplocha import HerniPlocha
 from model.figurka import Figurka
 
