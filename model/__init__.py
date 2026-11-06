@@ -13,8 +13,9 @@ from model.timer import Timer
 from model.quest import Quest
 from model.questmanager import QuestManager
 from model.logger import GameLogger
-from exportwriter import ExportWriter
-from model. MetadataWriter, ChessNotationWriter)
+from model.exportwriter import ExportWriter
+from model.metadatawriter import MetadataWriter
+from model.chessnotationwriter import ChessNotationWriter
 from model.manager import GameManager
 from model.tah import Tah
 from model.revizetahu import RevizeTahu

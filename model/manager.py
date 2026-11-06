@@ -1,7 +1,9 @@
 from typing import List, Optional
 from model.timer import Timer
-from model.quest import QuestManager
-from model.logger import GameLogger, MetadataWriter, ChessNotationWriter
+from model.questmanager import QuestManager
+from model.logger import GameLogger
+from model.metadatawriter import MetadataWriter
+from model.chessnotationwriter import ChessNotationWriter
 from model.hrac import Hrac
 from model.uzivatel import Uzivatel
 from model.herniplocha import HerniPlocha
@@ -11,7 +13,10 @@ class GameManager:
 
     def __init__(self, plocha: Optional[HerniPlocha] = None, hraci: Optional[List[Hrac]] = None):
         self.plocha: HerniPlocha = plocha if plocha else HerniPlocha()
-        self.hraci: List[Hrac] = hraci if hraci else [Hrac(1, "Bílý"), Hrac(2, "Černý")]
+        self.hraci: List[Hrac] = hraci if hraci is not None else [
+            Hrac(id_hrace=1, jmeno="Bílý", barva_tym=1),
+            Hrac(id_hrace=2, jmeno="Černý", barva_tym=-1)
+        ]
         self.aktivni_hrac: int = 0
         self.aktualni_tah: Optional[Tah] = None
 

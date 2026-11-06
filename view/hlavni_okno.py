@@ -1,18 +1,26 @@
 from tkinter import Tk, Frame, Canvas
 from model.manager import GameManager
 
-class HlavniOknoFrame(Frame):
-    def __init__(self, root):
-        super().__init__(root)
-        self.game_manager = game_manager if game_manager else GameManager()
-        self.herni_deska=Canvas(self, width=400, height=400, bg="white")
-        self.herni_deska.pack()
 
+class HlavniOknoFrame(Frame):
+    def __init__(self, root, game_manager=None):
+        super().__init__(root)
+        self.game_manager = game_manager if game_manager is not None else GameManager()
+        self.velikost_pole = 60
+        sirka_vyska = 8 * self.velikost_pole
+        self.herni_deska = Canvas(
+            self,
+            width=sirka_vyska,
+            height=sirka_vyska,
+            bg="white"
+        )
+        self.herni_deska.pack()
         self.vykresli_sachovnici()
         self.vykresli_figurky()
 
     def vykresli_sachovnici(self):
-        barvy = ["black", "#f0d9b5"]
+        """Vykreslí střídavě světlá a tmavá políčka šachovnice 8x8."""
+        barvy = ["#f0d9b5", "#b58863"]
 
         for radek in range(8):
             for sloupec in range(8):
@@ -23,7 +31,11 @@ class HlavniOknoFrame(Frame):
 
                 barva_index = (radek + sloupec) % 2
 
-                self.herni_deska.create_rectangle(x1, y1, x2, y2, fill=barvy[barva_index])
+                self.herni_deska.create_rectangle(
+                    x1, y1, x2, y2,
+                    fill=barvy[barva_index],
+                    outline=""
+                )
 
     def vykresli_figurky(self):
         symboly = {

@@ -4,7 +4,7 @@ class Hrac:
         self.id_hrace: int = id_hrace
         self.jmeno: str = jmeno
         # 1 = Bílý, -1 = Černý
-        self.barva_tym: int = barva_tym  
+        self.barva_tym: int = barva_tym
         self.uzivatel: Optional[Uzivatel] = uzivatel
         self.skore: int = 0
 

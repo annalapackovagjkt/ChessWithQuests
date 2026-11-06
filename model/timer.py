@@ -1,3 +1,5 @@
+import time
+
 class Timer:
 
     def __init__(self, pociatocny_cas_sekundy: int = 600):
