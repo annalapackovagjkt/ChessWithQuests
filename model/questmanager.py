@@ -1,3 +1,5 @@
+from model.quest import Quest
+
 class QuestManager:
 
     def __init__(self, field_type: str = "StandardQuests"):

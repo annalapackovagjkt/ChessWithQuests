@@ -155,6 +155,7 @@ class HlavniOknoFrame(Frame):
 if __name__ == "__main__":
     root = Tk()
     root.title("Chess with Quests")
-    view = HlavniOknoFrame(root)
+    game_manager = GameManager()
+    view = HlavniOknoFrame(root, game_manager)
     view.pack(fill="both", expand=True)
     root.mainloop()

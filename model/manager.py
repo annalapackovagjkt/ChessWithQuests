@@ -10,6 +10,7 @@ from model.hrac import Hrac
 from model.uzivatel import Uzivatel
 from model.herniplocha import HerniPlocha
 from model.figurka import Figurka
+from model.quest import Quest
 
 class GameManager:
 
@@ -24,7 +25,7 @@ class GameManager:
 
         self.casovac: Timer = Timer()
         self.game_logger: GameLogger = GameLogger("zapas.log")
-        self.revizor_tahu: RevizorTahu = RevizorTahu()
+        self.revizor_tahu: RevizorTahu = RevizorTahu(self.plocha)
         self.quest_manager: QuestManager = QuestManager()
 
         self.metadata_writer: MetadataWriter = MetadataWriter()
