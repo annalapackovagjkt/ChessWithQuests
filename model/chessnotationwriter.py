@@ -1,6 +1,6 @@
 class ChessNotationWriter:
     def __init__(self, format_notace: str = "PGN"):
-        super().__init__(field_type=format_notace)
+        super().__init__()
         self.format_notace: str = format_notace
         self.game_transcript: List[str] = []
 
