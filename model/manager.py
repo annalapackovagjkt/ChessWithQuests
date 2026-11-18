@@ -1,4 +1,6 @@
 from typing import List, Optional
+from model.tah import Tah
+from model.revizortahu import RevizorTahu
 from model.timer import Timer
 from model.questmanager import QuestManager
 from model.logger import GameLogger

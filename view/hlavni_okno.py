@@ -3,7 +3,7 @@ from model.manager import GameManager
 
 
 class HlavniOknoFrame(Frame):
-    def __init__(self, root, game_manager=None):
+    def __init__(self, root: HlavniOknoFrame, game_manager: object = None) -> None:
         super().__init__(root)
         self.game_manager = game_manager if game_manager is not None else GameManager()
         self.velikost_pole = 60

@@ -18,4 +18,4 @@ from model.metadatawriter import MetadataWriter
 from model.chessnotationwriter import ChessNotationWriter
 from model.manager import GameManager
 from model.tah import Tah
-from model.revizetahu import RevizeTahu
+from model.revizortahu import RevizorTahu

@@ -1,6 +1,6 @@
-class RevizeTahu:
+class RevizorTahu:
 
-    def __init__(self, herni_plocha):
+    def __init__(self, herni_plocha) -> None:
         self.herni_plocha = herni_plocha
         self.tah: list = []
 
