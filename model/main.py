@@ -3,6 +3,8 @@ from model.hrac import Hrac
 from model.uzivatel import Uzivatel
 from model.manager import GameManager
 from model.tah import Tah
+from Tkinter import Tk
+from controller.game_controller import GameController
 
 
 def spusti_test():
@@ -34,4 +36,8 @@ def spusti_test():
     print("--- VŠECHNY MODULY FUNGUJÍ SPRÁVNĚ ---")
 
 if __name__ == "__main__":
+    root = Tk()
+    root.resizable(False, False)
+    app = GameController(root)
+    root.mainloop()
     spusti_test()
